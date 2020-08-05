@@ -1,5 +1,5 @@
 # simple_django_server
-In this programming assignment, I will be implementing a server that allows the user to create a backend and frontend where:
+In this programming assignment, I will be implementing an application which includes:
 - An Admin login page 
 - Validate ID and Password 
 - If Valid, redirect to the profile page. 
