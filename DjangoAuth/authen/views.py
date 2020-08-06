@@ -42,3 +42,11 @@ def get_users_view(request):
     all_users= get_user_model().objects.all()
     context= {'all_users': all_users}
     return render(request, 'authen/dashboard.html', context)
+
+def dropdown_view(request):
+    if request.method == 'POST':
+        username = request.POST['item_id']
+        print(username)
+        u = get_user_model().objects.get(username = username)
+        u.delete()
+        return get_users_view(request)
