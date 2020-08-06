@@ -10,14 +10,6 @@
     <title>Algoscale</title>
 </head>
 <body class="container mt-5">
-    <nav class="mb-3">
-        {% if user.is_authenticated %}
-            <form action="{% url 'authen:logout' %}" method="post">
-                {% csrf_token %}
-                <button class="btn btn-primary btn-sm" type="submit">Log Out</button>
-            </form>
-        {% endif %}
-    </nav>
     {% block content %}
     
     {% endblock content %}
