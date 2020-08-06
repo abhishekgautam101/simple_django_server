@@ -9,7 +9,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('dashboard')
+            return render(request, 'authen/dashboard.html', {'form': form})
     else:
         form = UserCreationForm()
     return render(request, 'authen/signup.html', {'form': form})
@@ -23,7 +23,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('dashboard')
+            return render(request, 'authen/dashboard.html')
     else:
         form = AuthenticationForm()
     return render(request, 'authen/login.html', {'form': form})
@@ -31,4 +31,4 @@ def login_view(request):
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('dashboard')
+        return redirect('/landing')
