@@ -1,5 +1,5 @@
 # simple_django_server
-In this programming assignment, I will be implementing an application which includes:
+In this programming assignment, I have implemented an application which includes:
 - An Admin login page 
 - Validate ID and Password 
 - If Valid, redirect to the profile page. 
